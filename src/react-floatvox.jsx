@@ -1,11 +1,16 @@
 "use strict";
 
 import React from 'react';
+import FloatvoxBody from './react-floatvox-body';
+import FloatvoxEmitter from './react-floatvox-emitter';
 
-let Floatvox = React.createClass({
+var Floatvox = React.createClass({
   getInitialState() {
     return {
-      display: false
+      id: (+new Date + Math.floor(Math.random() * 99999)),
+      isOpen: false,
+      content: React.createElement('div'),
+      outerClassName: 'floatvox-outer'
     };
   },
 
@@ -77,56 +82,25 @@ let Floatvox = React.createClass({
   componentWillUnmount() {
   },
 
-  render() {
-    return (
-      <div>
-      </div>
-    );
-  }
-});
-
-
-let FloatvoxBody = React.createClass({
-
-});
-
-let FloatvoxEmitter = React.createClass({
-  propTypes: {
-    display: React.PropTypes.bool.isRequired
-  },
-
-  _onClick() {
-
-  },
-
-  render() {
-
-  }
-});
-
-
-export default React.createClass({
-  propTypes: {
-    display: React.PropTypes.bool.isRequired
-  },
-  getInitialState() {
-    return {
-      todos: []
-    };
-  },
-
-  componentDidMount() {
-    document.addEventListener('keydown', e => {
-      if (this.props.display && e.keyCode === 27) {
-        this.props.close();
-      }
+  open(id) {
+    console.log(id);
+    this.setState({
+      isOpen: true
     });
   },
 
   render() {
     return (
       <div>
+        <FloatvoxEmitter id={this.state.id} onClick={this.open} />
+        <div className={this.state.outerClassName, this.state.isOpen ? 'is-visible' : ''}>
+          <div className={this.state.backgroundClassName}></div>
+          <button ref="closeButton">CLOSE</button>
+          <FloatvoxBody id={this.state.id} content={this.state.content} />
+        </div>
       </div>
     );
   }
 });
+
+export default Floatvox

@@ -1,5 +1,9 @@
 "use strict";
 
-let Floatvox = require('./');
+import from './lib/react-floatvox.css';
+import React from 'react';
+import Floatvox from './';
 
-console.log(Floatvox);
+
+
+React.render(<Floatvox />, document.body);

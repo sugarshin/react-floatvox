@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+body {
+  background: indianred;
+}
+
+.floatvox-outer {
+  display: none;
+}
+
+.is-visible {
+  display: block;
+}
