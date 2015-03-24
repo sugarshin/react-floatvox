@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-var FloatvoxMain = React.createClass({
+var FloatvoxContainer = React.createClass({
   propTypes: {
     id: React.PropTypes.number.isRequired,
     content: React.PropTypes.element.isRequired,
@@ -18,13 +18,13 @@ var FloatvoxMain = React.createClass({
     return (
       <div
         key={this.props.id}
-        className={this.props.display ? 'floatvox-outer is-display' : 'floatvox-outer'}
+        className={this.props.display ? 'floatvox-container is-display' : 'floatvox-container'}
       >
-        <div className="floatvox-shade"></div>
+        <div className="floatvox-background"></div>
         <div className="floatvox-close">
           <button onClick={this._onCloseClick}>CLOSE</button>
         </div>
-        <div className="floatvox-body">
+        <div className="floatvox-content">
           {this.props.content}
         </div>
       </div>
@@ -32,4 +32,4 @@ var FloatvoxMain = React.createClass({
   }
 });
 
-export default FloatvoxMain
+export default FloatvoxContainer

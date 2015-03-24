@@ -1,7 +1,13 @@
+/*!
+ * @license react-floatvox
+ * (c) sugarshin
+ * License: MIT
+ */
+
 "use strict";
 
 import React from 'react';
-import FloatvoxMain from './react-floatvox-main';
+import FloatvoxContainer from './react-floatvox-container';
 import FloatvoxEmitter from './react-floatvox-emitter';
 
 var Floatvox = React.createClass({
@@ -45,7 +51,7 @@ var Floatvox = React.createClass({
           id={this.props.id}
           onClick={this.open}
         />
-        <FloatvoxMain
+        <FloatvoxContainer
           id={this.props.id}
           display={this.state.display}
           content={this.props.content}

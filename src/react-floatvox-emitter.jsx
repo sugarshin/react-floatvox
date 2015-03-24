@@ -14,7 +14,7 @@ var FloatvoxEmitter = React.createClass({
 
   render() {
     return (
-      <div key={this.props.id} className={this.props.className}>
+      <div key={this.props.id} className="floatvox-emitter">
         <button onClick={this._onClick}>OPEN</button>
       </div>
     );
