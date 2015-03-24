@@ -17,8 +17,8 @@ npm i sugarshin/react-floatvox
 ```
 
 ```js
-var React = rquire('react');
-var Floatvox = rquire('react-floatvox');
+var React = require('react');
+var Floatvox = require('react-floatvox');
 
 var el = <div><!-- Content --></div>;
 React.render(<Floatvox content={el} />, document.body);
