@@ -5,17 +5,16 @@ import React from 'react';
 var FloatvoxEmitter = React.createClass({
   propTypes: {
     id: React.PropTypes.number.isRequired,
-    onClick: React.PropTypes.func.isRequired,
-    className: React.PropTypes.string
+    onClick: React.PropTypes.func.isRequired
   },
 
   _onClick() {
-    this.props.onClick(this.props.id);
+    this.props.onClick();
   },
 
   render() {
     return (
-      <div className={this.props.className}>
+      <div key={this.props.id} className={this.props.className}>
         <button onClick={this._onClick}>OPEN</button>
       </div>
     );
