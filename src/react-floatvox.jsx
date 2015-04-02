@@ -10,7 +10,7 @@ import React from 'react';
 import FloatvoxContainer from './react-floatvox-container';
 import FloatvoxEmitter from './react-floatvox-emitter';
 
-var Floatvox = React.createClass({
+export default React.createClass({
   getInitialState() {
     return {
       display: false
@@ -61,5 +61,3 @@ var Floatvox = React.createClass({
     );
   }
 });
-
-export default Floatvox

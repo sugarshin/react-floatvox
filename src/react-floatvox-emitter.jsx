@@ -1,8 +1,10 @@
+// FloatvoxEmitter
+
 "use strict";
 
 import React from 'react';
 
-var FloatvoxEmitter = React.createClass({
+export default React.createClass({
   propTypes: {
     id: React.PropTypes.number.isRequired,
     onClick: React.PropTypes.func.isRequired
@@ -20,5 +22,3 @@ var FloatvoxEmitter = React.createClass({
     );
   }
 });
-
-export default FloatvoxEmitter

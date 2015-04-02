@@ -1,8 +1,10 @@
+// FloatvoxContainer
+
 "use strict";
 
 import React from 'react';
 
-var FloatvoxContainer = React.createClass({
+export default React.createClass({
   propTypes: {
     id: React.PropTypes.number.isRequired,
     content: React.PropTypes.element.isRequired,
@@ -31,5 +33,3 @@ var FloatvoxContainer = React.createClass({
     );
   }
 });
-
-export default FloatvoxContainer
